@@ -1,11 +1,62 @@
-[! extends "_wrappers/main.html" !]
+[!- extends "_wrappers/main.html" -!]
+
+[!- set themes = [
+"Transparency", "Maps", "Scramble", "Filters", "Remix", "Solids", "Sub-optimal", "Containers", "Blink", "Warning", "Camera", "Battle", "Upside-down", "Doubles", "Unicode", "Transition", "Illumination", "Trading", "Bounce", "Hidden", "Language", "Memory", "Style", "Counter", "Empty", "Texture", "Spell", "Tables", "Surprise", "Deprecated", "Spooky"
+] -!]
+
+
 
 [! block main !]
 <main class="default-wrapper">
-  <p>
-    This is a placeholder for day [@ day_num @]
-    of <a href="https://weirdweboctober.website/">Weird Web October 2025</a>. 
+  <p><a href="https://weirdweboctober.website/">Weird Web October</a> is
+    like <a href="https://inktober.com/">Inktober</a>. Except, you don't
+    make a drawing every day of the month. You build a website.
+    Each one is based off a theme for the day. 
+    Given <a href="https://subdomains.alanwsmith.com/">how much I
+      love making sites</a>, it's right up my alley. 
   </p>
+
+  <h2>A bitty Test Run</h2>
+  <p>The timing also works great for another project 
+    I've been working on called <a href="https://bitty.alanwsmith.com/">bitty</a>. 
+    It's a web component that uses signals to add reactivity to pages. 
+    I designed it specifically to make it easier to 
+    functional sites and pages. Weird Web October is a 
+    perfect use case. 
+  </p>
+  <p>
+    There's no framework our build step required. You just
+    load the component with <code>&lt;script&gt;</code> 
+    then wrap your content inside it. 
+    From there everything is done with native <code>data-*</code>
+    attributes that call out to vanilla JavaScript functions
+    that power whatever you want to do. 
+  </p>
+
+  <p>I'm still working on the docs and intro video for bitty, but
+    there's a bunch of examples on the site showing how it works.
+    Give it a shot if you like to tinker with things and 
+    <a href="https://socials.alanwsmith.com/">let me know what you think</a>.
+  </p>
+  <p>
+    Check it out at:
+    <a href="https://bitty.alanwsmith.com/">bitty.alanwsmith.com</a>
+  </p>
+  <p>-alan
+  </p>
+
+  <h2>The Sites</h2>
+  <ul>
+    [!- for theme in themes -!]
+    [!- if loop.index <= end_day_num !]
+    <li><a href="https://wwo-2025-[@ loop.index @].alanwsmith.com/">October [@ loop.index @] - [@ theme @]</a></li>
+    [!- else -!]
+    <li>October [@ loop.index @] - [@ theme @]</li>
+    [!- endif -!]
+    [!- endfor -!]
+  </ul>
+
+
 </main>
 
 [! endblock !]
