@@ -14,7 +14,12 @@ class Maker():
         return f"../../../wwo-2025-{day}/content/_wrappers"
 
     def copy_content_files(self):
-        files = ["custom-styles.html",  "base-styles.html", "bitty-data-send.txt", "custom-head-tags.html"]
+        files = [
+                "custom-styles.html",  
+                "base-styles.html", 
+                "bitty-data-send.txt", 
+                "custom-head-tags.html"
+                ]
         for day in day_range:
             for source_file in files:
                 dest_path = f"{self.output_dir_for_day(day)}/{source_file}"
