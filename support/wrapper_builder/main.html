@@ -58,15 +58,18 @@ https://github.com/alanwsmith/wwo-2025-[@ day_num @]
 
   </head>
   <body class="page">
-    <bitty-v1-rc5 data-connect="/components/page.js" class="content-wrapper" [! include "_wrappers/custom-head-tags.html" !]>
+    <bitty-v1-rc5 data-connect="/components/page.js" class="content-wrapper" [! include "_wrappers/bitty-data-send.txt" !]>
       <noscript>
         This sites uses JavaScript which appears to be off.
         Some features will not work without it. 
       </noscript>
       <header class="default-wrapper xlarge-bottom-margin">
-        <h1>Weird Web October<br />Day [@ day_num @] - [@ theme @]</h1>
+        <h1>[@ theme @]</h1>
+        <div class="small-font accent-bottom-border"><a href="https://ww0-2025-0.alanwsmith.com/">Weird Web October 2025</a>
+          | 
+          <a href="https://wwo-2025-0.alanwsmith.com/">Overview</a>
+        </div>
         <div class="day_nav small-font accent-bottom-border">
-          <a href="https://wwo-2025-0.alanwsmith.com/">Details</a> - 
           Day: 
           [! for num in range(1, end_day + 1) !]
             [! if num != day_num !]
@@ -83,7 +86,9 @@ https://github.com/alanwsmith/wwo-2025-[@ day_num @]
 
       <footer class="default-wrapper">
         <div class="small-font">
-          made by <a href="https://www.alanwsmith.com/">alan w smith</a> ~
+          <div>
+            made by <a href="https://www.alanwsmith.com/">alan w smith</a>
+          </div>
           <a href="https://wwo-2025-0.alanwsmith.com/">details</a> ~
           <a href="[@ github_url @]">source</a> ~
           <a href="https://socials.alanwsmith.com/">socials</a> ~
